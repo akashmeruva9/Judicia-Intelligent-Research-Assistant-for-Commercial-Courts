@@ -1,0 +1,12 @@
+services:
+  osmosis:
+    image: registry.rajatjacob.com/osmosis
+    ports:
+      - published: 3200
+        target: 3000
+    deploy:
+      mode: global
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
